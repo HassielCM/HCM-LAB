@@ -10,3 +10,13 @@ __pycache__/
 
 # VS Code
 .vscode/
+
+# Node / React
+node_modules/
+dist/
+
+# Documentación local
+/Docs/bitacora_integrada.txt
+/Docs/Prompts/
+/Docs/Diario/
+/Docs/Comandos/
