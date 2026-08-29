@@ -1,35 +1,61 @@
+import { Routes, Route, useNavigate } from 'react-router-dom'
+
 import AuthCard from '../components/AuthCard.jsx'
 import Button from '../components/Button.jsx'
 
+
 function ComponentGallery() {
-  const ruta = window.location.pathname
-  
-    if (ruta === '/components/authcard') {
-      return <AuthCard />
-    }
 
-  if (ruta === '/components/button') {
-    return <Button>Click me</Button>
-  }
+    const navigate = useNavigate()
 
-  if (ruta === '/components') {
     return (
-      <>
-        <h1>Galería de componentes</h1>
+        <Routes>
 
-        <button onClick={() => (window.location.pathname = '/components/authcard')} >
-          Ver AuthCard
-        </button>
+            <Route
+                path=""
+                element={
+                    <>
+                        <h1>Galería de componentes</h1>
 
-        <button onClick={() => (window.location.pathname = '/components/button')} >
-          Ver Button
-        </button>
-        
-      </>
+                        <button onClick={() => navigate('/components/authcard')}>
+                            Ver AuthCard
+                        </button>
+
+                        <button onClick={() => navigate('/components/button')}>
+                            Ver Button
+                        </button>
+                    </>
+                }
+            />
+
+            <Route
+                path="authcard"
+                element={
+                    <AuthCard>
+                        <p>Contenido de prueba para AuthCard</p>
+                    </AuthCard>
+                }
+            />
+
+            <Route
+                path="button"
+                element={
+                    <Button>
+                        Click me
+                    </Button>
+                }
+            />
+
+            <Route
+                path="*"
+                element={
+                    <h1>Componente no encontrado</h1>
+                }
+            />
+
+        </Routes>
     )
-  }
-
-  return <h1>Componente no encontrado</h1>
 }
+
 
 export default ComponentGallery

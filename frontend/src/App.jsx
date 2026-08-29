@@ -1,14 +1,37 @@
+import { Routes, Route, Navigate } from 'react-router-dom'
+
 import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
 import ComponentGallery from './dev/ComponentGallery.jsx'
 
+
 function App() {
-  const ruta = window.location.pathname
+    return (
+        <Routes>
 
-  if (ruta.startsWith('/components')) {
-    return <ComponentGallery />
-  }
+            <Route
+                path="/"
+                element={<Navigate to="/login" replace />}
+            />
 
-  return <Login />
+            <Route
+                path="/login"
+                element={<Login />}
+            />
+
+            <Route
+                path="/register"
+                element={<Register />}
+            />
+
+            <Route
+                path="/components/*"
+                element={<ComponentGallery />}
+            />
+
+        </Routes>
+    )
 }
+
 
 export default App

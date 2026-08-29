@@ -1,14 +1,17 @@
 .btn {
-  font-family: var(--font-main);
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: none;
+    font-family: var(--font-main);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+    padding: 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
 }
 
 .btn:hover {
@@ -21,17 +24,26 @@
 }
 
 .btn-primary:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 70%, black);
+    background-color: color-mix(
+        in srgb,
+        var(--color-primary) 70%,
+        black
+    );
 }
 
 .btn-secondary {
     background-color: var(--color-surface-light);
     color: var(--color-text-accent);
+
     border: 1px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
-    background-color: color-mix(in srgb, var(--color-surface) 10%, white);
+    background-color: color-mix(
+        in srgb,
+        var(--color-surface) 10%,
+        white
+    );
 }
 
 .btn-tertiary {
@@ -40,7 +52,11 @@
 }
 
 .btn-tertiary:hover {
-    background-color: color-mix(in srgb, var(--color-surface) 95%, white);
+    background-color: color-mix(
+        in srgb,
+        var(--color-surface) 95%,
+        white
+    );
 }
 
 .btn-ghost {
@@ -48,15 +64,17 @@
     color: var(--color-text-accent);
 }
 
-.btn-tycs{
+.btn-tycs {
     background-color: transparent;
     padding: 0;
+
     color: var(--color-text-accent);
 }
 
 .btn-icon {
     background-color: transparent;
     padding: 0;
+
     color: var(--color-text-accent);
 }
 

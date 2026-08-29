@@ -1,19 +1,198 @@
 .login-page {
-    background: linear-gradient(to bottom right, var(--color-background), var(--color-primary));
+    position: relative;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(27, 88, 221, 0.16),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(0, 44, 238, 0.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #05070b 0%,
+            #08111f 50%,
+            #0b1933 100%
+        );
 }
 
-.login-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+.login-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 35rem;
+    height: 35rem;
+
+    left: 35%;
+    bottom: -18rem;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    filter: blur(100px);
+
+    opacity: 0.16;
+
+    pointer-events: none;
 }
+
+
+.login-page::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 2rem 2rem;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+
+.login-info,
+.login-auth {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   LADO IZQUIERDO
+   ========================= */
+
+.login-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    padding-left: 8rem;
+    padding-right: 3rem;
+
+    font-family: var(--font-main);
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+   ========================= */
+
+.login-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    align-self: end;
+
+    max-width: 32rem;
+
+    padding-bottom: 2rem;
+}
+
+
+.login-info h2 {
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+
+.login-info h1 {
+    margin: 0.75rem 0 0;
+
+    color: var(--color-text-accent);
+
+    font-size: 5.5rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+.login-accent {
+    width: 3rem;
+    height: 0.2rem;
+
+    margin-top: 1.5rem;
+
+    border-radius: 1rem;
+
+    background-color: var(--color-primary);
+}
+
+
+.login-info p {
+    max-width: 28rem;
+
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.login-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-content: flex-start;
+
+    gap: 1.5rem;
+
+    width: 27rem;
+
+    justify-self: center;
+    align-self: start;
+
+    padding-top: 2rem;
+}
+
+
+/* =========================
+   LADO DERECHO
+   ========================= */
 
 .login-auth {
     display: flex;
+
     justify-content: center;
     align-items: center;
 }

@@ -1,0 +1,25 @@
+.register-page {
+    background: linear-gradient(
+        to bottom right,
+        var(--color-background),
+        var(--color-primary)
+    );
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 100vh;
+}
+
+.register-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

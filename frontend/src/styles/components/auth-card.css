@@ -1,8 +1,5 @@
 .auth-card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
 
     width: 60%;
     max-width: 620px;
@@ -18,36 +15,4 @@
 
     border-radius: 1.5rem;
     padding: 2.5rem;
-}
-
-.auth-card h2{
-    text-align: center;
-}
-
-.auth-separator {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--color-text-accent);
-}
-
-.auth-separator::before,
-.auth-separator::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--color-text-accent);
-}
-
-.auth-terms {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.auth-acceptance {
-    margin: 0;
-    text-align: center;
 }
