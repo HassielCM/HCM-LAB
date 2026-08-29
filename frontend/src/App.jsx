@@ -1,7 +1,14 @@
-import Home from './pages/Home.jsx'
+import Login from './pages/Login.jsx'
+import ComponentGallery from './dev/ComponentGallery.jsx'
 
 function App() {
-  return <Home />
+  const ruta = window.location.pathname
+
+  if (ruta.startsWith('/components')) {
+    return <ComponentGallery />
+  }
+
+  return <Login />
 }
 
 export default App

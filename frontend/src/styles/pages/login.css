@@ -1,0 +1,19 @@
+.login-page {
+    background: linear-gradient(to bottom right, var(--color-background), var(--color-primary));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.login-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
