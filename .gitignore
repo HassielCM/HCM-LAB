@@ -1,22 +1,60 @@
-# Python
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Entornos de Python y archivos generados
 .venv/
 venv/
 __pycache__/
-*.pyc
+*.py[cod]
 
-# Variables de entorno / secretos
+# Archivos temporales y credenciales
+*.tmp
+*.temp
 .env
 .env.*
+.env-*
+.envrc
+*.env
+.npmrc
+.pypirc
+.netrc
+_netrc
+credentials.json
+secrets.json
+service-account*.json
+.secrets/
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+.vercel/
 
-# VS Code
-.vscode/
+# Configuración local de agentes y servidores MCP
+.codex/
+.mcp/
+.mcp.json
+mcp.json
 
-# Node / React
-node_modules/
-dist/
-
-# Documentación local
-/Docs/bitacora_integrada.txt
-/Docs/Prompts/
-/Docs/Diario/
-/Docs/Comandos/
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

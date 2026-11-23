@@ -1,11 +1,15 @@
-# HCM_LAB
+# HCM LAB
 
-Plataforma personal, portafolio y laboratorio de desarrollo de software e inteligencia artificial.
+Base de React y Vite con JavaScript (JSX).
 
-## Estado actual
+## Desarrollo
 
-Proyecto en preparación.
+Con Node.js y npm instalados, ejecuta desde la raíz:
 
-## Sitio
+```sh
+cd frontend
+npm install
+npm run dev
+```
 
-https://hcm-lab.dev
+Ejecuta `npm run build` desde `frontend/` para generar la compilación de producción en `frontend/dist/`.
