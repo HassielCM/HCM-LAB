@@ -42,6 +42,10 @@ service-account*.json
 *.pfx
 .vercel/
 
+# Documentación local
+/docs/
+/identidad/
+
 # Configuración local de agentes y servidores MCP
 .codex/
 .mcp/

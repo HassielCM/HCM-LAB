@@ -1,5 +1,3 @@
-import styles from './Home.module.css'
-
 export default function Home() {
-  return <h1 className={styles.title}>HCM LAB</h1>
+  return <h1 className="my-0 text-3xl font-bold">HCM LAB</h1>
 }
